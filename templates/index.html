@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Krypteringstjänst</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <h2>Kryptera / Avkryptera HTML, CSS, JS</h2>
+  <form method="post" enctype="multipart/form-data">
+    <label>Välj fil:</label>
+    <input type="file" name="file" required><br><br>
+    <label>Lösenord:</label>
+    <input type="password" name="password" required><br><br>
+    <button type="submit" name="action" value="encrypt">🔒 Kryptera</button>
+    <button type="submit" name="action" value="decrypt">🔓 Avkryptera</button>
+  </form>
+  <p style="color:red;">{{ result }}</p>
+</body>
+</html>
